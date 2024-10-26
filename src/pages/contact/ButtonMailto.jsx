@@ -1,10 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./ButtonMailto.css";
 
 const ButtonMailto = ({ mailto, label }) => {
     return (
-        <div className="mailtoButton">
+        <div  type="button" class="btn btn-light">
         <a
             className="mailtoLink"
             href='#'

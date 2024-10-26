@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import Axios from "axios";
+import React, { useEffect } from 'react';
 import AppDetail from './AppDetail';
 import './AppList.css';
+import '../../pages/Pages.css';
 
 const AppList = (props) => {
-const [appList, setAppList] = useState([]);
 
     useEffect(() => {
         if (props.id) {
@@ -20,93 +19,150 @@ const [appList, setAppList] = useState([]);
         }
     }, [props.id])
 
-    let position = 0;
-    
+
     return (
-        <div className="AppList">
-            <div class="AppContainer">            
+        <div className="pageContainer">
+            <div class="postList"> 
+                <div class="postContainer">         
             {[
+    
     {
-    "id": 1,
-    "name": "Sainstagram",
-    "github": "https://github.com/JulietteMahe/sainstagram",
-    "netlify": "https://sainstagram.netlify.app/",
-    "globalpic1": "https://i.ibb.co/7rDjjhw/2022-03-08-13.png",
-    "globalpic2": "https://i.ibb.co/3R1MhGD/2022-03-08-14.png",
-    "globalpic3": "https://i.ibb.co/7XHT5nB/2022-03-08-16.png",
-    "globalpic4": "https://i.ibb.co/8B5d3vJ/2022-03-08-15.png",
-    "globalpic5": "https://i.ibb.co/9g9T6PX/2022-03-09-5.png",
-    "description": "Un réseau social destiné aux chevaliers de ta galaxie. Partage tes aventures, tes opinions et déclenche des clashs avec les autres chevaliers",
-    "clienttype": "fictif",
-    "teamtype": "groupe",
-    "stack": [
-    "ReactJS ",
-    "HTML ",
-    "CSS "
-    ]
+        "id": 3,
+        "date": "20241014",
+        "globalpic1": "https://i.ibb.co/pWFgChv/POST-ASE-1.png",
+        "link1": "https://www.capital.fr/economie-politique/aide-a-lenfance-un-scandale-a-630-000-euros-revele-de-graves-failles-dans-la-protection-des-mineurs-1503081",
+        "link2": "https://www.madmoizelle.com/les-enfants-confies-a-lase-subissent-toujours-des-violences-sexuelles-une-fois-places-1506489",
+        "link3": "https://france3-regions.francetvinfo.fr/centre-val-de-loire/indre/chateauroux/violences-humiliations-travail-force-19-personnes-bientot-jugees-a-chateauroux-pour-maltraitances-sur-des-mineurs-confies-par-l-aide-sociale-a-l-enfance-3041174.html",
+        "link4": "https://www.leparisien.fr/faits-divers/scandale-des-enfants-places-du-nord-jai-mis-des-annees-a-me-relever-la-memoire-a-vif-dangelina-12-10-2024-ZJ5FCC7YFNBGHDBE2PLB45LUTE.php",
+        "link5":"https://www.lanouvellerepublique.fr/chateauroux/humilies-comme-vous-ne-pouvez-l-imaginer-le-proces-des-enfants-places-du-nord-s-ouvre-lundi-a-chateauroux",
+        "link6":"",
+        "linkdesc1": "Capital",
+        "linkdesc2": "Madmoizelle",
+        "linkdesc3": "France 3 Régions",
+        "linkdesc4": "Le Parisien",
+        "linkdesc5": "La nouvelle république",
+        "linkdesc6": "",
+        "description": "LES ENFANTS PLACES DU NORD"
     },
     {
-    "id": 2,
-    "name": "STUDIO ICH",
-    "github": "https://github.com/JulietteMahe/dupre-studioich",
-    "netlify": "https://dupre-project.netlify.app/",
-    "globalpic1": "https://i.ibb.co/nMqMt0m/2022-03-14-9.png",
-    "globalpic2": "https://i.ibb.co/VJ26gzW/2022-03-14-7.png",
-    "globalpic3": "https://i.ibb.co/h9x4MS6/2022-03-14-6.png",
-    "globalpic4": "https://i.ibb.co/Gxcmbtd/2022-03-14-8.png",
-    "globalpic5": "https://i.ibb.co/NTxsH7n/2022-03-14-14.png",
-    "description": "Refonte d'un site Wordpress dans le domaine du conseil en image. A venir: paiement en ligne, envoi automatisé de ebooks, back-office de gestion",
-    "clienttype": "réel",
-    "teamtype": "solo",
-    "stack": [
-    "ReactJS ",
-    "HTML ",
-    "CSS "
-    ]
+        "id": 2,
+        "date": "20241011",
+        "globalpic1": "https://i.ibb.co/fqPsR07/POST-BOLLORE-ROUEN-1.png",
+        "link1": "https://actu.fr/normandie/grand-couronne_76319/incendie-de-bollore-logistics-les-batteries-qui-ont-brule-n-avaient-rien-a-faire-la-selon-la-prefecture_61707519.html",
+        "link2": "https://www.francebleu.fr/infos/environnement/incendie-de-bollore-logistics-l-entreprise-n-avait-pas-d-autorisation-pour-stocker-ces-batteries-au-lithium-6499509",
+        "link3": "https://www.bfmtv.com/normandie/incendie-de-bollore-logistics-la-prefecture-met-en-cause-le-stockage-non-autorise-de-batteries-au-lithium_AV-202410090976.html",
+        "link4": "https://www.seine-maritime.gouv.fr/Actualites/Incendie-Bollore-Logistics-le-rapport-post-accident-publie",
+        "link5":"https://www.actu-environnement.com/ae/news/incendie-bollore-logistics-dechets-dangereux-stockage-sans-autorisation-mise-en-demeure-44862.php4",
+        "link6":"https://www.ouest-france.fr/faits-divers/incendie/incendie-a-bollore-logistics-lentreprise-stockait-des-dechets-dangereux-sans-autorisation-cc934350-863f-11ef-a461-dc3a2eb2c9d7",
+        "linkdesc1": "ActuFr",
+        "linkdesc2": "France Bleu",
+        "linkdesc3": "BFMTV",
+        "linkdesc4": "Seine-Maritime.gouv.fr",
+        "linkdesc5": "Actu Environnement",
+        "linkdesc6": "Ouest France",
+        "description": "BOLLORE LOGISTICS"
     },
     {
-    "id": 3,
-    "name": "RisQ",
-    "github": "https://github.com/JulietteMahe/risQ",
-    "netlify": "",
-    "globalpic1": "https://i.ibb.co/k4db6Dq/main.png",
-    "globalpic2": "https://i.ibb.co/tB02Q0v/1.png",
-    "globalpic3": "https://i.ibb.co/fxbCYc1/2.png",
-    "globalpic4": "https://i.ibb.co/gZhzHhc/4.png",
-    "globalpic5": "https://i.ibb.co/DWSK3mw/5.png",
-    "description": "Hackathon Wild Code School & Enedis. Projet de signalisation des risques grâce à la géolocalisation. Version mobile (usage par les agents de terrain)",
-    "clienttype": "réel",
-    "teamtype": "groupe (2 jours)",
-    "stack": [
-    "ReactJS ",
-    "Express/NodeJS ",
-    "HTML ",
-    "CSS "
-    ]
+        "id": 2,
+        "date": "20240930",
+        "globalpic1": "https://i.ibb.co/gRQy7Jz/GREVE-HOWTO-1.png",
+        "link1": "https://www.service-public.fr/particuliers/vosdroits/F117",
+        "link2": "https://www.service-public.fr/particuliers/vosdroits/F499",
+        "link3":"",
+        "link4":"",
+        "link5":"",
+        "link6":"",
+        "linkdesc1": "servicepublic.fr Droit de grève secteur privé",
+        "linkdesc2": "servicepublic.fr Droit de grève secteur public",
+        "linkdesc3": "",
+        "linkdesc4": "",
+        "linkdesc5": "",
+        "linkdesc6": "",
+        "description": "DROIT DE GREVE"
+    },
+    {
+        "id": 3,
+        "date": "20240921",
+        "globalpic1": "https://i.ibb.co/PrH8RdQ/POST-ECOLO-1-1.png",
+        "link1": "https://www.huffingtonpost.fr/environnement/video/nestle-waters-echappe-a-un-proces-en-france-pour-ses-eaux-minerales-et-c-est-grace-a-cette-loi-de-2016_239550.html",
+        "link2": "https://reporterre.net/Nestle-echappe-a-un-proces-Une-multinationale-peut-donc-tromper-et-s-en-tirer",
+        "link3":"",
+        "link4":"",
+        "link5":"",
+        "link6":"",
+        "linkdesc1": "Huffington Post",
+        "linkdesc2": "Reporterre",
+        "linkdesc3": "",
+        "linkdesc4": "",
+        "linkdesc5": "",
+        "linkdesc6": "",
+        "description": "PAUL WATSON"
+    },
+    {
+        "id": 2,
+        "date": "20240917",
+        "globalpic1": "https://i.ibb.co/mGqLdrX/20240917-POST-COUT-DISSOL-1.png",
+        "link1": "https://www.unaf.fr/ressources/budget-type-famille-a-un-homme-une-femme-deux-garcons-ages-de-6-a-13-ans/",
+        "link2": "https://www.capital.fr/votre-argent/le-cout-faramineux-de-la-dissolution-de-lassemblee-nationale-1502420",
+        "link3":"",
+        "link4":"",
+        "link5":"",
+        "link6":"",
+        "linkdesc1": "UNAF",
+        "linkdesc2": "Capital",
+        "linkdesc3": "",
+        "linkdesc4": "",
+        "linkdesc5": "",
+        "linkdesc6": "",
+        "description": "OU EST PASSE L'ARGENT?"
+    },
+    {
+        "id": 1,
+        "date": "20240915",
+        "globalpic1": "https://i.ibb.co/yQtknBY/POST-ECOLO-1.png",
+        "link1": "https://www.huffingtonpost.fr/environnement/video/nestle-waters-echappe-a-un-proces-en-france-pour-ses-eaux-minerales-et-c-est-grace-a-cette-loi-de-2016_239550.html",
+        "link2": "https://reporterre.net/Nestle-echappe-a-un-proces-Une-multinationale-peut-donc-tromper-et-s-en-tirer",
+        "link3": "https://www.lefigaro.fr/societes/nestle-voit-son-benefice-net-bondir-de-20-en-2023-20240222",
+        "link4":"",
+        "link5":"",
+        "link6":"",
+        "linkdesc1": "HuffingtonPost",
+        "linkdesc2": "Reporterre",
+        "linkdesc3": "Le Figaro",
+        "linkdesc4": "",
+        "linkdesc5": "",
+        "linkdesc6": "",
+        "description": "NESTLE WATTERS"
     }
+
+
+
     ].map((app, index) => {
                     return (
-                        <AppDetail 
-                        key={index} 
-                        name={app.name} 
-                        github={app.github}
-                        netlify={app.netlify}
+                        <AppDetail  className= "AppDetail"
+                        key={index}
+                        id={app.id}
+                        date={app.date}
                         globalpic1={app.globalpic1} 
-                        globalpic2={app.globalpic2} 
-                        globalpic3={app.globalpic3} 
-                        globalpic4={app.globalpic4} 
-                        globalpic5={app.globalpic5} 
-                        description={app.description} 
-                        clienttype={app.clienttype}  
-                        teamtype={app.teamtype}
-                        stack={app.stack}
-                        cardStyle={position}                       
-                        />
-                        
+                        link1={app.link1} 
+                        link2={app.link2} 
+                        link3={app.link3}
+                        link4={app.link4} 
+                        link5={app.link5} 
+                        link6={app.link6}
+                        linkdesc1={app.linkdesc1} 
+                        linkdesc2={app.linkdesc2} 
+                        linkdesc3={app.linkdesc3} 
+                        linkdesc4={app.linkdesc4} 
+                        linkdesc5={app.linkdesc5} 
+                        linkdesc6={app.linkdesc6} 
+                        description={app.description}                     
+                        /> 
                     )
                 })}
             
             </div>
+            </div>  
             
         </div>
     )

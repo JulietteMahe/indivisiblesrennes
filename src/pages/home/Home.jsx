@@ -1,15 +1,13 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 import './Home.css';
+import '../../pages/Pages.css';
 import './main.js';
 
 function Home() {
   return (
-    <div className="Home">
-     <div className="homeContainer">
-        <NavLink to="/about-me" className="navLink">
-          <button className="comeInBtn">Enter</button>
-        </NavLink>
+    <div className="Page">
+     <div className="pageContainer">
+        zsjazjsazudezd_zeud_ezud_eu_duze_duzepdedeodieijieujcuzedzeadiejdo
      </div>
     </div>
   );

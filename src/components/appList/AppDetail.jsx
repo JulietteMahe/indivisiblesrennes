@@ -1,45 +1,34 @@
-import React, { useState, useEffect } from 'react';
-import Axios from "axios";
+import React, { useState } from 'react';
 import './AppDetail.css';
-import Logo from "../../assets/pictures/pngegg.png"
 
 const AppDetail = (props) => {
 
+    const [showModal, setShowModal] = useState(false);
+    const [closeModal, setCloseModal] = useState(true);
+
+
     return (
-        <div className="AppDetail">
-            <div className="firstBox">
-                <div className="mainImgContainer">
-                    <a className="mainImgA" href={props.netlify}>
-                       <img className="mainImg" src={props.globalpic1} alt={props.name} />
+        <div className="AppDetail" onClick={() =>setShowModal(!showModal)}>
+                    <a className="mainImgA" >                    
+                       <img className="mainImg" src={props.globalpic1} alt={props.description} />
                     </a>
-                </div>
-                <div className='text-content'>  
-                    <div className='cardTitle'>
-                       <p className='app-name'>{props.name}</p>
-                       <p className ="voirCode">Voir le code -> </p>
-                       <a className="githubLogoA" href={props.github}>
-                          <img className="githubLogo" src={Logo} alt="Github link"></img>
-                       </a>
-                    </div> 
-                    <div className='app-text'>
-                       <p className='app-description'>{props.description}</p>
-                       <p className='app-client'>Réalisé en {props.teamtype} pour un client {props.clienttype}.</p>  
-                       <p className='app-stack'>Stack utilisée : {props.stack}</p>
-                    </div>
-                </div> 
-            </div>              
-            <div className="secondBox">
-                <a href={props.netlify} className="underBox">
-                    <div className="topRow">
-                       <img className="app-secondary-img" src={props.globalpic2} alt={props.name} />                   
-                       <img className="app-secondary-img" src={props.globalpic3} alt={props.name} />                   
-                    </div>
-                    <div className="bottomRow">
-                       <img className="app-secondary-img" src={props.globalpic4} alt={props.name} />
-                       <img className="app-secondary-img" src={props.globalpic5} alt={props.name} />
-                    </div>
-                </a>
-            </div> 
+                    {showModal == true ? 
+                                <div className="modal" >
+                                    <div className="modalInfo">
+                                        <div className="modalLinks">
+                                            <a href={props.link1} target="_blank" rel="noreferrer" className="postLink" >{props.linkdesc1}</a>
+                                            <a href={props.link2} target="_blank" rel="noreferrer" className="postLink" >{props.linkdesc2}</a>
+                                            <a href={props.link3} target="_blank" rel="noreferrer" className="postLink" >{props.linkdesc3}</a>
+                                            <a href={props.link4} target="_blank" rel="noreferrer" className="postLink" >{props.linkdesc4}</a>
+                                            <a href={props.link5} target="_blank" rel="noreferrer" className="postLink" >{props.linkdesc5}</a>
+                                        <a href={props.link6} target="_blank" className="postLink">{props.linkdesc6}</a>
+                                        </div>
+                                        <div className="modalClose" onClick={() => setCloseModal(!closeModal)}>x</div>
+                                    </div>
+                                </div> 
+                              :
+                              <div></div> }
+
         </div>
     )
 }

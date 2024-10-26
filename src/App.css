@@ -7,7 +7,7 @@
 }
 
 :root {
-    --main-color-background: #485461;
+    --main-color-background: white;
     --content-color-background: #52606fc7;
     --content-color-background-hover: #607081c7;
     --darker-color-background: #28313b;
@@ -22,4 +22,7 @@ body {
 
 .arrowOver{
     cursor: pointer;
+}
+p{
+    margin-bottom: 0px;
 }
