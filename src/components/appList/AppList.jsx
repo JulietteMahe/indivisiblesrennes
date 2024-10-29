@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import AppDetail from './AppDetail';
-import './AppList.css';
+import './List.css';
 import '../../pages/Pages.css';
 
 const AppList = (props) => {

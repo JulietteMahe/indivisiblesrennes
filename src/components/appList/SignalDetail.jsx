@@ -6,9 +6,13 @@ const AppDetail = (props) => {
     const [showModal, setShowModal] = useState(false);
     const myModal = useRef(null);
 
+    let windowFeatures = "popup,top=0,left=0,width=320,height=320";
+    let windowFeat = "popup,top=0,left=320,width=320,height=320";
+
     const handleClick = (event) => {
             event.preventDefault(); 
-            window.open(event.target.href, '_blank', 'noopener,noreferrer');
+            window.open(event.target.href, '_blank', /*'noopener,noreferrer'*/ windowFeatures);
+            window.open(event.target.href, '_blank', /*'noopener,noreferrer'*/ windowFeat);
     };
 
     const closeModal = (event) => {
@@ -25,12 +29,7 @@ const AppDetail = (props) => {
                                 <div className="modal" ref={myModal}  >
                                     <div className="modalInfo">
                                         <div className="modalLinks">
-                                            <a href={props.link1} onClick={handleClick} className="postLink" >{props.linkdesc1}</a>
-                                            <a href={props.link2} onClick={handleClick} className="postLink"  >{props.linkdesc2}</a>
-                                            <a href={props.link3} onClick={handleClick} className="postLink" >{props.linkdesc3}</a>
-                                            <a href={props.link4} onClick={handleClick} className="postLink" >{props.linkdesc4}</a>
-                                            <a href={props.link5} onClick={handleClick} className="postLink" >{props.linkdesc5}</a>
-                                            <a href={props.link6} onClick={handleClick} className="postLink">{props.linkdesc6}</a>
+                                            <a href={props.linkArcom} onClick={handleClick} className="postLink" >SIGNALER A L'ARCOM</a>
                                         </div>
                                         <div className="modalClose" onClick={() =>closeModal()}>x</div>
                                     </div>

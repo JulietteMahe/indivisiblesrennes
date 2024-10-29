@@ -1,6 +1,6 @@
 import './Arcom.css';
 import '../../pages/Pages.css';
-import SignalList from "../../components/signalList/SignalList";
+import SignalList from "../../components/appList/SignalList";
 
 function Arcom() {
   return (
